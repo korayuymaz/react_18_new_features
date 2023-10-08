@@ -1,0 +1,22 @@
+.navbar{
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar li{
+  display: block;
+  list-style: none;
+  padding: auto;
+}
+
+.active a{
+  font-weight: bold;
+}
+
+.navbar li a{
+  color: black;
+  text-decoration: none;
+}

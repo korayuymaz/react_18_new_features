@@ -1,37 +1,71 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
+import "./style.css";
+import ListItem from "../../components/layout-components/list-item";
 
 const Layout = () => {
+  const location = useLocation();
+  const activeClass = "active";
   return (
     <>
       <nav>
-        <ul>
-          <li>
+        <ul className="navbar">
+          <ListItem
+            activeClass={activeClass}
+            location={location.pathname}
+            path={"/"}
+          >
             <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/automatic-batching">Automatic Batching</Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem
+            activeClass={activeClass}
+            location={location.pathname}
+            path={"/automatic-batching"}
+          >
+            <Link className="link" to="/automatic-batching">
+              Automatic Batching
+            </Link>
+          </ListItem>
+          <ListItem
+            activeClass={activeClass}
+            location={location.pathname}
+            path={"/new-hooks"}
+          >
             <Link to="/new-hooks">New Hooks</Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem
+            activeClass={activeClass}
+            location={location.pathname}
+            path={"/client-server"}
+          >
             <Link to="/client-server">Client & Server Rendering</Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem
+            activeClass={activeClass}
+            location={location.pathname}
+            path={"/strict-mode"}
+          >
             <Link to="/strict-mode">Strict Mode</Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem
+            activeClass={activeClass}
+            location={location.pathname}
+            path={"/suspense"}
+          >
             <Link to="/suspense">Suspense Features</Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem
+            activeClass={activeClass}
+            location={location.pathname}
+            path={"/transitions"}
+          >
             <Link to="/transitions">Transitions</Link>
-          </li>
+          </ListItem>
         </ul>
       </nav>
 
       <Outlet />
     </>
-  )
+  );
 };
 
 export default Layout;
