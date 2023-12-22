@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/layout";
+import Layout from "./layout";
 import Home from "./pages/home";
 import AutomaticBatching from "./pages/automatic-batching";
 import NewHooks from "./pages/new-hooks";

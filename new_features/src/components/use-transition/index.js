@@ -2,6 +2,8 @@ import { useState, useTransition } from "react";
 import musashi from "../../assets/users/Musashi.jpeg";
 import spike from "../../assets/users/spike.jpeg";
 
+import "./style.css";
+
 const users = [
   { avatar: musashi, name: "Musashi" },
   { avatar: spike, name: "Spike" },
@@ -20,7 +22,7 @@ function Transition() {
   };
 
   return (
-    <div className="container">
+    <>
       <div>
         {users.length !== filterUsers.length
           ? `${filterUsers.length} matches`
@@ -41,7 +43,7 @@ function Transition() {
           {filterUsers.map((user) => (
             <div class="card">
               <div className="profile">
-                <img src={user.avatar} alt="avatar" />
+                <img className="image" src={user.avatar} alt="avatar" />
               </div>
               <div className="body">
                 <strong>{user.name}</strong>
@@ -50,7 +52,7 @@ function Transition() {
           ))}
         </div>
       )}
-    </div>
+    </>
   );
 }
 

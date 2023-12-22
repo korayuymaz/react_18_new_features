@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import "./style.css";
-import ListItem from "../../components/layout-components/list-item";
+import ListItem from "../components/layout-components/list-item";
 
 const Layout = () => {
   const location = useLocation();
